@@ -1,0 +1,35 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(event) {
+      /*VANILLA JAVASCRIPT*/
+      var element = document.getElementById("page-loading");
+      element.parentNode.removeChild(element);
+      /* OR WITH jQuery*/
+      $('#page-loading')
+          .fadeOut('slow');
+  });
+
+  
+</script>
+
+<div style="text-align:center">
+  <h1>
+   {{ title }}
+  </h1>
+  
+</div>
+<div>
+<ul *ngIf="content_handler=='1'">
+  
+    <li>Your Area :{{ weather?.name }}</li>
+    <li>Maximum Temperature :{{ max_temp }} &#176;C</li>
+    <li>Minimum Temperature :{{ min_temp }} &#176;C</li>
+    <li>Humidity :{{ weather?.main?.humidity }} %</li>
+    <li>Wind Speed :{{ wind_speed }} Km/h</li>
+   
+    <p><button (click)="locationReset()">Refresh</button></p>
+  </ul>
+</div>
+<div *ngIf="content_handler=='0'">
+  <p>You denied me your location :(</p>
+</div>

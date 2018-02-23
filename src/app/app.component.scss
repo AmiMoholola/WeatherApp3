@@ -1,0 +1,28 @@
+
+
+
+$button-color:   white;
+$button-size: 18px;
+$bold-text : bold;
+$normal-text : normal;
+$button-backround : grey;
+
+button{
+    color : $button-color;
+    font-size: $button-size;
+    background-color: $button-backround;
+}
+
+.text-bold{
+    font-weight:  $bold-text;
+}
+
+
+.text-normal{
+    font-weight:  $normal-text;
+}
+
+li{
+    font-weight: $normal-text;
+    
+}
